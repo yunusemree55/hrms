@@ -10,4 +10,6 @@ public interface JobSeekerDao extends JpaRepository<JobSeeker, Integer> {
 
 	List<JobSeeker> findByEmail(String email);
 	List<JobSeeker> findByIdentityNumber(String identityNumber);
+	
+	
 }

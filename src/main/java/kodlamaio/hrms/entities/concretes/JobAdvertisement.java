@@ -23,6 +23,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "job_advertisements")
 public class JobAdvertisement {
 
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
@@ -48,6 +49,7 @@ public class JobAdvertisement {
 	
 	@Column(name="is_active")
 	private boolean isActive;
+	
 	
 	@ManyToOne()
 	@JoinColumn(name="city_id")

@@ -1,10 +1,15 @@
 package kodlamaio.hrms.entities.concretes;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
+import kodlamaio.hrms.core.entities.User;
+import kodlamaio.hrms.entities.concretes.Cv.Resume;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -31,6 +36,9 @@ public class JobSeeker extends User{
 	@Column(name="birth_of_year")
 	private int birthOfYear;
 	
+	
+	@OneToMany(mappedBy = "jobSeeker")
+	private List<Resume> resumes;
 	
 
 }

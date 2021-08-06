@@ -4,13 +4,12 @@ import java.util.List;
 
 import kodlamaio.hrms.core.results.DataResult;
 import kodlamaio.hrms.core.results.Result;
-import kodlamaio.hrms.entities.concretes.JobSeeker;
+import kodlamaio.hrms.entities.concretes.Cv.Skill;
 
-
-public interface JobSeekerService {
-
-	Result add(JobSeeker jobSeeker);
+public interface SkillService {
 	
-	DataResult<List<JobSeeker>>  getAll();
+	DataResult<List<Skill>> getAll();
+	Result add(Skill skill);
 	
+
 }

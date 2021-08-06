@@ -77,4 +77,6 @@ public class JobSeekerManager implements JobSeekerService {
 		return new SuccessDataResult<List<JobSeeker>>(this.jobSeekerDao.findAll(),"İş Arayanlar Listelendi");
 	}
 
+
+
 }
