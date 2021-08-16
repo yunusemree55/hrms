@@ -77,4 +77,12 @@ public class JobSeekerManager implements JobSeekerService {
 		return new SuccessDataResult<List<JobSeeker>>(this.jobSeekerDao.findAll(),"İş Arayanlar Listelendi");
 	}
 
+	@Override
+	public DataResult<JobSeeker> findById(int jobSeekerId) {
+		
+		return new SuccessDataResult<JobSeeker>(this.jobSeekerDao.findById(jobSeekerId),"İş arayan görüntülendi");
+	}
+
+
+
 }

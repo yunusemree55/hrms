@@ -6,10 +6,13 @@ import kodlamaio.hrms.core.results.DataResult;
 import kodlamaio.hrms.core.results.Result;
 import kodlamaio.hrms.entities.concretes.JobSeeker;
 
+
 public interface JobSeekerService {
 
 	Result add(JobSeeker jobSeeker);
 	
-	
 	DataResult<List<JobSeeker>>  getAll();
+	
+	DataResult<JobSeeker> findById(int jobSeekerId);
+	
 }
