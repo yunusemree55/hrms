@@ -9,9 +9,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import kodlamaio.hrms.entities.concretes.JobSeeker;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,22 +19,20 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","jobSeeker"})
 @Table(name="social_medias")
 public class SocialMedia {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="social_media_id")
+	@Column(name="id")
 	private int id;
 	
 	@Column(name="link")
 	private String link;
 	
+	@JsonIgnore
 	@ManyToOne()
-	@JoinColumn(name="user_id")
-	private JobSeeker jobSeeker;
-	
-	
+	@JoinColumn(name="resume_id")
+	private Resume resume;
 	
 }

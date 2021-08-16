@@ -13,6 +13,4 @@ public interface JobSeekerService {
 	
 	DataResult<List<JobSeeker>>  getAll();
 	
-	DataResult<JobSeeker> findById(int jobSeekerId);
-	
 }
